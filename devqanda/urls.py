@@ -25,5 +25,5 @@ urlpatterns = [
     path('about/', aboutPageView),
     path('accounts/', include('allauth.urls')),
     path('question/<int:id>/', questionView),
-    path('question/new', newView)
+    path('question/new/', newView)
 ]
