@@ -1,3 +1,6 @@
+{% extends "common.html" %}
+{% block content %}
+
 <h2>Dev Q and A - an open source question and answer forum for developers</h2>
 
 {% if current_user %}
@@ -16,3 +19,4 @@ user's not logged in!
 
 
 {% endfor %}
+{% endblock %}
