@@ -7,4 +7,7 @@
     </p>
 
 {% endfor %}
+{% if not questions_exist %}
+    <p>No questions here yet.</p>
+{% endif %}
 {% endblock %}
