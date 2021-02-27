@@ -1,9 +1,7 @@
 {% extends "common.html" %}
 {% block content %}
 
-<h2>Dev Q and A - an open source question and answer forum for developers</h2>
-
-{% if current_user %}
+{% if current_user.is_authenticated %}
 <!-- user's logged in! and the user's name is {{current_user.username}} -->
 {% else %}
 <!-- user's not logged in! -->
