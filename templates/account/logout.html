@@ -3,7 +3,7 @@
 {% block content %}
 <h3>Sign Out</h3>
 
-<p>Are you sure you want to sign out?</p>
+<p style="margin-top:10; margin-bottom:14">Are you sure you want to sign out?</p>
 
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
