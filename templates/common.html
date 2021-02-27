@@ -4,17 +4,22 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'style.css' %}">
-        <title>{% block title %}CSQA - An open-source Q&A website for programmers{% endblock %}</title>
+        <title>{% block title %}DevQ and A - An open-source Q&A forum for developers{% endblock %}</title>
     </head>
     <body class="bg-light">
         <div class="container" style="max-width:700">
             <div class="card shadow-sm" style="margin-top: 30px">
                 <div class="card-header">
                     <h6 style="margin-bottom: 0; margin-top: 7; display: inline-block">
-                        <a href="/" class="text-dark">CSQA - An open-source Q&A website for coders</a>
+                        <a href="/" class="text-dark">Dev Q and A<span class="site-title-second-half"> - An open-source Q&A forum for developers</span></a>
                     </h6>
-                    <a href="/question/new"><button type="button" class="btn btn-sm btn-outline-dark" style="float: right">New Question</button></a>
-                </div>
+                    <a href="/question/new"><button type="button" class="btn btn-sm btn-outline-dark" style="float: right">
+                        {% if current_user.is_authenticated %}
+                            New Question
+                        {% else %}
+                            Sign Up to Ask Question
+                        {% endif %}
+                    </button></a></div>
                 <div class="pb-3 pt-4 pr-4 pl-4">
                     {% block content %}{% endblock %}
                 </div>
