@@ -12,15 +12,27 @@
             <div class="card shadow-sm" style="margin-top: 30px">
                 <div class="card-header">
                     <h6 style="margin-bottom: 0; margin-top: 7; display: inline-block">
-                        <a href="/" class="text-dark">Dev Q and A<span class="site-title-second-half"> - An open-source Q&A forum for developers</span></a>
+                        <a href="/" class="text-dark">Dev Q and A
+                            {% if not current_user.is_authenticated %}
+                            <span class="site-title-second-half"></span>
+                            {% endif %}
+                        </a>
                     </h6>
-                    <a href="/question/new"><button type="button" class="btn btn-sm btn-outline-dark" style="float: right">
+                    <span style="float: right">
+                        <span class="devqanda-nav">
+                            {% if not current_user.is_authenticated %}
+                            <a href="/" class="text-dark">My Questions</a> |
+                            <a href="/" class="text-dark">My Answers</a>
+                            {% endif %}
+                        </span>
+                        <a href="/question/new" style="display: inline-block"><button type="button" class="btn btn-sm btn-outline-dark">
                         {% if current_user.is_authenticated %}
                             New Question
                         {% else %}
                             Sign Up to Ask Question
                         {% endif %}
-                    </button></a>
+                        </button></a>
+                    </span>
                 </div>
                 <div class="pb-3 pt-4 pr-4 pl-4">
                     {% block content %}{% endblock %}
