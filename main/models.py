@@ -50,7 +50,7 @@ class QuestionForm(forms.Form):
 
 class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     text = models.TextField()
     created = models.DateTimeField(editable=False)
     modified = models.DateTimeField()

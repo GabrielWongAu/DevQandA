@@ -152,6 +152,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 
+AUTH_USER_MODEL = 'users.User'
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
