@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django import forms
@@ -19,7 +20,7 @@ def x_ago_helper(diff):
     return f'{diff.seconds // 3600} hours ago'
 
 class Question(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     body = models.TextField(blank=True, null=True)
     created     = models.DateTimeField(editable=False)
