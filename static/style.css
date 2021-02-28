@@ -1,3 +1,7 @@
+.num-answers {
+    font-size: 15px;
+}
+
 .answers > hr:last-child {
     display: none;
 }
@@ -10,7 +14,7 @@
     margin-left: 10px;
 }
 
-.csqa-nav {
+.devqanda-nav {
     position: relative;
     top: 1px;
     font-size: 13;
