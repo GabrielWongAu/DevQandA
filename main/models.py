@@ -26,7 +26,8 @@ class Question(models.Model):
     created     = models.DateTimeField(editable=False)
     modified    = models.DateTimeField()
     answers_count = models.IntegerField(default=0)
-
+    points = models.IntegerField(default=0)
+    
     @property
     def num_answers(self):
         answers = Answer.objects.filter(question_id = self.id)
@@ -34,7 +35,7 @@ class Question(models.Model):
     def x_ago(self):
         diff = datetime.datetime.now(datetime.timezone.utc) - self.created
         return x_ago_helper(diff)
-        
+
     # def update_points(self):
     #     upvotes = self.upvoted_users.distinct.count()
     #     downvotes = self.upvoted_users.distinct.count()
