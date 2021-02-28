@@ -36,11 +36,19 @@ class Question(models.Model):
         diff = datetime.datetime.now(datetime.timezone.utc) - self.created
         return x_ago_helper(diff)
 
-    # def update_points(self):
-    #     upvotes = self.upvoted_users.distinct.count()
-    #     downvotes = self.upvoted_users.distinct.count()
-    #     downvotes -= self.upvoted_users.filter(is_superuser=True).count()*2
-        
+    def show_points(self):
+        if self.points < 0:
+            return 0
+        else:
+            return self.points
+
+    def update_points(self):
+        upvotes = self.upvoted_users.distinct().count()
+        downvotes = self.downvoted_users.distinct().count()
+        downvotes += self.downvoted_users.filter(is_superuser=True).count()*2
+        self.points = upvotes - downvotes
+        self.save()
+
     def save(self, *args, **kwargs):
         ''' On save, update timestamps '''
         if not self.id:
@@ -63,14 +71,14 @@ class Answer(models.Model):
 
     @property
     def x_ago(self):
-        diff = datetime.datetime.now(datetime.timezone.utc) - self.created
+        diff = timezone.now() - self.created
         return x_ago_helper(diff)
 
     def save(self, *args, **kwargs):
         ''' On save, update timestamps '''
         if not self.id:
-            self.created = datetime.datetime.now()
-        self.modified = datetime.datetime.now()
+            self.created = timezone.now()
+        self.modified = timezone.now()
         return super(Answer, self).save(*args, **kwargs)
     
     def __str__(self):
