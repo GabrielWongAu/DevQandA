@@ -38,7 +38,7 @@ def answerView(request, id):
         return HttpResponseRedirect('/accounts/login')
     if not request.method == 'POST':
         return HttpResponseRedirect(f'/question/{id}')
-    form = AnswerForm(request.post)
+    form = AnswerForm(request.POST)
     if not form.is_valid():
         return HttpResponseRedirect(f'/question/{id}')
     a = Answer(
