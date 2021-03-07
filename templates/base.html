@@ -5,17 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <!-- development version, includes helpful console warnings -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-        <title>{% block title %}Dev QandA - An open-source Q&A forum for developers{% endblock %}</title>
+        <title>{% block title %}Dev Q and A - An open-source Q&A forum for developers{% endblock %}</title>
     </head>
-    <body class="bg-light">
+    <body class="bg-white">
         <div class="container" style="max-width:700">
             <div class="card shadow-sm" style="margin-top: 20px">
                 <div class="card-header">
                     <h6 style="margin-bottom: 0; margin-top: 7; display: inline-block">
+                        <a href="/" class="text-dark"><i class="fas fa-laptop-code"></i></a>
                         <a href="/" class="text-dark">Dev Q and A
                             {% if not current_user.is_authenticated %}
                             <span class="site-title-second-half"></span>
