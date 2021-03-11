@@ -50,7 +50,7 @@ To escape from the virtual environment
 
 
 
-### **Requirement R1: Use appropriate libraries**
+### **Requirement 1: Use appropriate libraries**
 
 ### Libraries Used
 
@@ -74,6 +74,124 @@ To escape from the virtual environment
 * **Gunicorn** - a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resources, and fairly speedy.
 * **Psycopg2** - Psycopg is the most popular PostgreSQL database adapter for the Python programming language. 
 * **Whitenoise** - With a couple of lines of config, WhiteNoise allows your web app to serve its own static files, making it a self-contained unit that can be deployed anywhere without relying on nginx, Amazon S3 or any other external service. (Especially useful on Heroku, OpenShift and other PaaS providers.)
+
+<br>
+
+### **Requirement 3. Project Management/ Task Delegation Methodology**
+
+<br>
+
+**Day 0** 
+
+![Trello Screenshot 1](./docs/PartB/TrelloScreenshot1.png) 
+
+![Trello Screenshot 2](./docs/PartB/TrelloScreenshot2.png) 
+
+<br>
+
+**Day 1** 
+
+![Trello Screenshot 3](./docs/PartB/TrelloScreenshot3.png) 
+
+![Trello Screenshot 4](./docs/PartB/TrelloScreenshot4.png) 
+
+<br>
+
+**Day 2** 
+
+![Trello Screenshot 5](./docs/PartB/TrelloScreenshot5.png) 
+
+![Trello Screenshot 6](./docs/PartB/TrelloScreenshot6.png) 
+
+<br>
+
+**Day 3** 
+![Trello Screenshot 7](./docs/PartB/TrelloScreenshot7.png) 
+
+![Trello Screenshot 8](./docs/PartB/TrelloScreenshot8.png) 
+
+<br>
+
+**Day 4** 
+
+![Trello Screenshot 9](./docs/PartB/TrelloScreenshot9.png) 
+
+![Trello Screenshot 10](./docs/PartB/TrelloScreenshot10.png) 
+
+<br>
+
+**Day 5** 
+
+![Trello Screenshot 11](./docs/PartB/TrelloScreenshot11.png) 
+
+![Trello Screenshot 12](./docs/PartB/TrelloScreenshot12.png) 
+
+<br>
+
+**Day 6** 
+
+![Trello Screenshot 13](./docs/PartB/TrelloScreenshot13.png) 
+
+![Trello Screenshot 14](./docs/PartB/TrelloScreenshot14.png) 
+
+<br>
+
+**Day 7** 
+
+![Trello Screenshot 15](./docs/PartB/TrelloScreenshot15.png) 
+
+![Trello Screenshot 16](./docs/PartB/TrelloScreenshot16.png) 
+
+<br>
+
+**Day 8** 
+
+![Trello Screenshot 17](./docs/PartB/TrelloScreenshot17.png) 
+
+<br>
+
+**Day 9** 
+
+![Trello Screenshot 18](./docs/PartB/TrelloScreenshot18.png) 
+
+<br>
+
+**Day 10** 
+
+![Trello Screenshot 19](./docs/PartB/TrelloScreenshot19.png) 
+<br>
+<br>
+
+### **Requirement 8 b): Provides evidence of user testing in the development environment**
+
+<br>
+
+See Requirement 9 below
+
+<br>
+
+### **Requirement 8 b): Provides evidence of user testing in the production environment**
+
+<br>
+
+![Trello Screenshot 19](./docs/PartB/ProductionTesting.png)
+
+<br>
+
+### **Requirement 9: Utilise a formal testing framework**
+
+<br>
+
+**Standard tests** 
+
+    python manage.py test tests
+
+
+**Functional tests (using Selenium)** 
+
+    python manage.py test functional_tests
+
+<br>
 
 # T4A2 - Full Stack Application - Part A Documentation
 ### **Requirement R1: Description of your website**
@@ -116,7 +234,7 @@ As a respondent, you want to see how your answers are received. By users having 
 
 The website is best suited for developers of all levels (aspiring developers, CS students, bootcamp students, self-learners, professional developers) who either have developer related questions or have developer knowledge/experience which they wish to share to the community.
 
-* **Tech stack**
+**Tech stack**
 
 * **Frontend Technologies:** HTML5, CSS, Javascript
 
@@ -134,24 +252,24 @@ The website is best suited for developers of all levels (aspiring developers, CS
 
 ### **Requirement 2: Data Flow Diagram**
 
-![Data Flow Diagram](./docs/dataflowdigram.png) 
+![Data Flow Diagram](./docs/PartA/dataflowdigram.png) 
 
 <br>
 
 ### **Requirement 3. Application Architecture**
 
-![Application Architecture](./docs/applicationarchitecture.png) 
+![Application Architecture](./docs/PartA/applicationarchitecture.png) 
 
 <br>
 
 ### **Requirement 4. User Stories**
 
 
-![User Stories Brainstorming](./docs/UserStoriesBrainstorming.png) 
+![User Stories Brainstorming](./docs/PartA/UserStoriesBrainstorming.png) 
 
-![User Stories Refinement](./docs/UserStoriesRefinement.png) 
+![User Stories Refinement](./docs/PartA/UserStoriesRefinement.png) 
 
-![User Stories Revision](./docs/UserStoriesRevision.png) 
+![User Stories Revision](./docs/PartA/UserStoriesRevision.png) 
 
 <br>
 
@@ -161,109 +279,109 @@ The website is best suited for developers of all levels (aspiring developers, CS
 
 Wireframe - Home Page (Not Logged In)
 
-![Wire Frames Home Page](./docs/Wireframes-1HomePage.png) 
+![Wire Frames Home Page](./docs/PartA/Wireframes-1HomePage.png) 
 
 <br>
 
 Wireframe - Question Page (Logged In)
 
-![Wire Frames Selected Question Page Logged In](./docs/Wireframes-2SelectedQuestionPageLoggedIn.png) 
+![Wire Frames Selected Question Page Logged In](./docs/PartA/Wireframes-2SelectedQuestionPageLoggedIn.png) 
 
 <br>
 
 Wireframe - Question Page (Not Logged In)
 
-![Wire Frames Selected Question Page Not Logged In](./docs/Wireframes-3SelectedQuestionPageNotLoggedIn.png) 
+![Wire Frames Selected Question Page Not Logged In](./docs/PartA/Wireframes-3SelectedQuestionPageNotLoggedIn.png) 
 
 <br>
 
 Wireframe - Sign Up Page
 
-![Wire Frames Sign Up Page](./docs/Wireframes-4SignUpPage.png) 
+![Wire Frames Sign Up Page](./docs/PartA/Wireframes-4SignUpPage.png) 
 
 <br>
 
 Wireframe - Sign In Page
 
-![Wire Frames Sign In Page](./docs/Wireframes-5SignInPage.png) 
+![Wire Frames Sign In Page](./docs/PartA/Wireframes-5SignInPage.png) 
 
 <br>
 
 Wireframe - New Question Page (Logged In)
 
-![Wire Frames New Question page](./docs/Wireframes-6NewQuestionPage.png) 
+![Wire Frames New Question page](./docs/PartA/Wireframes-6NewQuestionPage.png) 
 
 <br>
 
 Wireframe - Search Page (Logged In)
 
-![Wire Frames Search page](./docs/Wireframes-7SearchPage.png) 
+![Wire Frames Search page](./docs/PartA/Wireframes-7SearchPage.png) 
 
 <br>
 
 Wireframe - Leaderboard Page (Logged In)
 
-![Wire Frames Leaderboard page](./docs/Wireframes-8Leaderboard.png) 
+![Wire Frames Leaderboard page](./docs/PartA/Wireframes-8Leaderboard.png) 
 
 <br>
 
-![Wire Frames About page](./docs/Wireframes-9About.png) 
+![Wire Frames About page](./docs/PartA/Wireframes-9About.png) 
 
 <br>
 Wireframe - My Questions Page (Logged In)
 
-![Wire Frames My Questions](./docs/Wireframes-10MyQuestions.png) 
+![Wire Frames My Questions](./docs/PartA/Wireframes-10MyQuestions.png) 
 
 <br>
 
 Wireframe - My Answers Page (Logged In)
 
-![Wire Frames My Answers](./docs/Wireframes-11MyAnswers.png) 
+![Wire Frames My Answers](./docs/PartA/Wireframes-11MyAnswers.png) 
 
 
 ### **Requirement 6 - Screenshots of your Trello Board throughout the duration of the project**
 
 **15 February**
-![Trello Screenshot 1](./docs/TrelloScreenshot1.png) 
+![Trello Screenshot 1](./docs/PartA/TrelloScreenshot1.png) 
 
-![Trello Screenshot 2](./docs/TrelloScreenshot2.png) 
+![Trello Screenshot 2](./docs/PartA/TrelloScreenshot2.png) 
 
 <br>
 
 **16 February** 
-![Trello Screenshot 3](./docs/TrelloScreenshot3.png) 
+![Trello Screenshot 3](./docs/PartA/TrelloScreenshot3.png) 
 
-![Trello Screenshot 4](./docs/TrelloScreenshot4.png) 
+![Trello Screenshot 4](./docs/PartA/TrelloScreenshot4.png) 
 
-![Trello Screenshot 5](./docs/TrelloScreenshot5.png) 
+![Trello Screenshot 5](./docs/PartA/TrelloScreenshot5.png) 
 
 <br>
 
 **17 February**
-![Trello Screenshot 6](./docs/TrelloScreenshot6.png) 
+![Trello Screenshot 6](./docs/PartA/TrelloScreenshot6.png) 
 
-![Trello Screenshot 7](./docs/TrelloScreenshot7.png) 
+![Trello Screenshot 7](./docs/PartA/TrelloScreenshot7.png) 
 
 <br>
 
 **18 February**
-![Trello Screenshot 8](./docs/TrelloScreenshot8.png) 
+![Trello Screenshot 8](./docs/PartA/TrelloScreenshot8.png) 
 
-![Trello Screenshot 9](./docs/TrelloScreenshot9.png) 
+![Trello Screenshot 9](./docs/PartA/TrelloScreenshot9.png) 
 
 <br>
 
 **19 February**
-![Trello Screenshot 10](./docs/TrelloScreenshot10.png) 
+![Trello Screenshot 10](./docs/PartA/TrelloScreenshot10.png) 
 
-![Trello Screenshot 11](./docs/TrelloScreenshot11.png) 
+![Trello Screenshot 11](./docs/PartA/TrelloScreenshot11.png) 
 
 <br>
 
 **20 February** 
 
-![Trello Screenshot 12](./docs/TrelloScreenshot12.png) 
+![Trello Screenshot 12](./docs/PartA/TrelloScreenshot12.png) 
 
-![Trello Screenshot 13](./docs/TrelloScreenshot13.png) 
+![Trello Screenshot 13](./docs/PartA/TrelloScreenshot13.png) 
 
 
