@@ -2,33 +2,53 @@
 
 # How to install this app
 
-### How to setup the Django application 
+### How to setup the Django application
 
 **Step 1.** Install Python 3.8, python3-pip and python3.8-venv
 
     sudo apt install python3.8, python3.8-venv, python3-pip
 
-**Step 2.** Clone GitHub repo to local project folder
+**Step 2.** Clone GitHub repo to local project folder, then cd into the folder
 
     git clone https://github.com/GabrielWongAu/devqanda.git
 
-**Step 3.** Create and activate virtual environment
+    cd devqanda
+
+**Step 3.** Create a virtual environment
+
+We need to create a virtual env for our app to run in. Run this command in whatever folder you want to create your venv folder.
 
     python3.8 -m venv venv
-    
+
+**Step 3.** Activate the virtual environment
+
+    # Mac/Linux
     source venv/bin/activate
+
+    # Windows
+    venv\Scripts\activate.bat - May need to add full path (c:\users\....venv\Scripts\activate.bat)
+    
+To escape from the virtual environment
+
+    deactivate
 
 **Step 4.** Install dependencies
 
     pip install -r requirements.txt
 
-**Step 5.** Create migrations 
+**Step 5.** Run Server (http://127.0.0.1:8000) CTRL+C to stop
+
+    python manage.py runserver
+
+**Step 6.** Create migrations 
 
     python manage.py makemigrations
 
-**Step 6.** Run migrations 
+**Step .** Run migrations 
 
     python manage.py migrate
+
+
 
 ### **Requirement R1: Use appropriate libraries**
 
